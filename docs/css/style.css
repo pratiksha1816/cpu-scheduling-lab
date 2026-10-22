@@ -1,0 +1,51 @@
+:root{--bg:#f3f5f2;--sf:#fff;--tx:#17201c;--mu:#5d6b64;--ln:#d5dcd6;--ac:#0f6b4f;--ac2:#e8f2ec;--bad:#b3261e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101613;--sf:#18211c;--tx:#e6ede8;--mu:#93a39a;--ln:#2c3a33;--ac:#4fc79b;--ac2:#1d2e26;--bad:#ff8a80}}
+:root[data-theme="dark"]{--bg:#101613;--sf:#18211c;--tx:#e6ede8;--mu:#93a39a;--ln:#2c3a33;--ac:#4fc79b;--ac2:#1d2e26;--bad:#ff8a80}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 "Segoe UI",system-ui,sans-serif}
+.w{max-width:1000px;margin:0 auto;padding:16px}
+h1{font:700 24px/1.2 Georgia,"Times New Roman",serif;margin:4px 0 2px}h2{font:600 17px Georgia,serif;margin:0 0 10px}
+.sub{color:var(--mu);margin:0 0 14px}
+nav{display:flex;gap:4px;border-bottom:1px solid var(--ln);margin-bottom:14px;overflow-x:auto}
+nav button{background:none;border:0;border-bottom:3px solid transparent;color:var(--mu);padding:9px 14px;font:inherit;cursor:pointer;white-space:nowrap}
+nav button.on{color:var(--ac);border-color:var(--ac);font-weight:600}
+.c{background:var(--sf);border:1px solid var(--ln);border-radius:8px;padding:14px;margin-bottom:14px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button.b,select,input{font:inherit;color:var(--tx);background:var(--sf);border:1px solid var(--ln);border-radius:6px;padding:6px 10px}
+button.b{cursor:pointer}button.p{background:var(--ac);color:var(--bg);border-color:var(--ac);font-weight:600}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.sc{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:6px 8px;border-bottom:1px solid var(--ln);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}th{color:var(--mu);font-weight:600}
+td input{width:62px;text-align:right;padding:4px 6px}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;color:#fff;font-weight:600;font-size:13px}
+.g{position:relative;height:44px;margin-top:6px}.g div{position:absolute;top:0;height:44px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;border-right:1px solid rgba(255,255,255,.5);overflow:hidden}
+.g .idle{background:repeating-linear-gradient(45deg,var(--ln),var(--ln) 4px,transparent 4px,transparent 8px);color:var(--mu)}
+.tk{position:relative;height:20px;font-size:12px;color:var(--mu)}.tk span{position:absolute;transform:translateX(-50%)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-top:12px}
+.st{background:var(--ac2);border-radius:6px;padding:8px 10px}.st b{display:block;font-size:20px;color:var(--ac)}.st small{color:var(--mu)}
+.bar{display:flex;align-items:center;gap:8px;margin:4px 0}.bar span.n{width:92px;font-size:13px}.bar i{display:block;height:16px;background:var(--ac);border-radius:3px;min-width:2px}.bar i.best{background:#d98a00}
+.bar em{font-style:normal;font-size:13px;color:var(--mu)}
+.opt{display:block;width:100%;text-align:left;margin:6px 0;cursor:pointer}.opt.ok{border-color:var(--ac);background:var(--ac2)}.opt.no{border-color:var(--bad)}
+.ex{margin-top:8px;color:var(--mu)}.mu{color:var(--mu)}
+.rq{min-height:28px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+
+/* ---------- UI/UX polish ---------- */
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.top h1{font-size:28px;letter-spacing:-.01em}
+#th{margin-top:6px}
+.c{box-shadow:0 1px 2px rgba(0,0,0,.05);transition:box-shadow .2s}
+.c:hover{box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.c h2{padding-bottom:8px;border-bottom:1px solid var(--ln)}
+button.b{transition:background .15s,transform .05s}
+button.b:hover:not(:disabled){background:var(--ac2)}button.b:active{transform:translateY(1px)}
+button.p:hover{filter:brightness(1.1);background:var(--ac)}
+nav{position:sticky;top:0;background:var(--bg);z-index:5}
+tr:hover td{background:var(--ac2)}
+.g div{box-shadow:inset 0 -3px 0 rgba(0,0,0,.18);transition:width .3s}
+.st{border-left:4px solid var(--ac)}
+.kb{font-size:12px;color:var(--mu);margin:6px 0 0}
+kbd{border:1px solid var(--ln);border-bottom-width:2px;border-radius:4px;padding:0 5px;font:12px monospace}
+@media (max-width:600px){.w{padding:10px}.top h1{font-size:22px}td input{width:52px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
